@@ -46,6 +46,7 @@ local Slider = Tab:CreateSlider({
 
         Callback = function(Value)
             DevTools.Player:SetJumpPower(Value)
+        end,
     })
 local Button = Tab:CreateButton({
     Name = "Reset",
