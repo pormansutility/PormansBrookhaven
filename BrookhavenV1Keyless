@@ -62,18 +62,3 @@ local Tab = Window:CreateTab({Name = "Discord/Support", Icon="rbxassetid://60226
 
 local Tab = Window:CreateTab({Name="Instant"})
 
-local Label = Tab:CreateLabel("Instant Kill")
-local LoopReset = true
-
-local Toggle = Tab:CreateToggle({
-    Name = "Loop Reset Character",
-    Callback = function(Value)
-        LoopReset = Value
-    end,
-})
-
-game:GetService("RunService").RenderStepped:Connect(function()
-	if LoopReset then
-		DevTools.Player:Kill()
-	end
-end)
