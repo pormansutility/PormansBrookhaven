@@ -38,28 +38,11 @@ local Reset = Tab:CreateButton({
 local Tab = Window:CreateTab({Name="Other!"})
 
 local Tab = Window:CreateTab({Name="Teleport"})
-local Slider = Tab:CreateSlider({
-	Name = "Speed",
-	Suffix = "Studs",
-	
-	Range = {16, 100},
-	Interval = 1,
-	Default = 16,
-	
-	Callback = function(Value)
-		DevTools.Player:SetSpeed(Value)
-	end,
-})
 
-local Slider = Tab:CreateSlider({
-    Name = "JumpPower",
-    Suffix = "Studs",
 
-    Range = {16,100},
-    Interval = 1,
-    Default = 16,
+local Tab = Window:CreateTab({Name="Our Chat Bypass"})
 
-    Callback = function(Value)
-     DevTools.Player:SetJumpPower(Value)
-    end,
-})
+
+local Tab = Window:CreateTab({Name="Fun", Icon="rbxassetid://6026568229"})
+
+local Tab = Window:CreateTab({Name="Abuse"})
