@@ -34,7 +34,8 @@ local Slider = Tab:CreateSlider({
 
     Callback = function(Value)
         DevTools.Player:SetSpeed(Value)
-
+    end,
+})
     local Label = Tab:CreateLabel("JumpPower")
     local Slider = Tab:CreateSlider({
         Name = "JumpPower",
