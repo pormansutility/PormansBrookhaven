@@ -53,8 +53,8 @@ local Slider = Tab:CreateSlider({
     Interval = 1,
     Default = 16,
 
-    Callback = function()
-        DevTools.Player:SetSpeed()
+    Callback = function(Value)
+        DevTools.Player:SetSpeed(Value)
     end,
 })
 
