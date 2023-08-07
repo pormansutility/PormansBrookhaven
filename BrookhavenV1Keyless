@@ -12,6 +12,7 @@ local Window = DevTools:Init({
 })
 
 
+
 local Tab = Window:CreateTab({Name = "Main Settings", Icon = "rbxassetid://6031289445"})
 
 local Tab = Window:CreateTab({Name = "Home"})
@@ -62,3 +63,4 @@ local Tab = Window:CreateTab({Name = "Discord/Support", Icon="rbxassetid://60226
 
 local Tab = Window:CreateTab({Name="Instant"})
 
+local Tab = Window:CreateTab({Name="All"})
