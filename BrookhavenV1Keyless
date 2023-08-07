@@ -36,19 +36,17 @@ local Slider = Tab:CreateSlider({
         DevTools.Player:SetSpeed(Value)
 
     local Label = Tab:CreateLabel("JumpPower")
-
     local Slider = Tab:CreateSlider({
         Name = "JumpPower",
-        Suffix = 'High",
-        
-        Range = {17,100},
+        Suffix = "Studs",
+
+        Range = {16,100},
         Interval = 1,
         Default = 16,
 
         Callback = function(Value)
             DevTools.Player:SetJumpPower(Value)
     })
-})
 local Button = Tab:CreateButton({
     Name = "Reset",
     Callback = function()
