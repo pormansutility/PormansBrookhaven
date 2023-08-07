@@ -7,7 +7,7 @@ local Window = DevTools:Init({
     LoadingBackgroundImage = "rbxassetid://6023565902", -- Optional: Set a background image for the loading screen
     Options = {
         KillYourself = false, -- Optional: Set to true to reset character on launch
-        FOVAnimations = false, -- Optional: Set to true to enable FOV Animations
+        FOVAnimations = true, -- Optional: Set to true to enable FOV Animations
     }
 })
 
@@ -36,3 +36,30 @@ local Reset = Tab:CreateButton({
 })
 
 local Tab = Window:CreateTab({Name="Other!"})
+
+local Tab = Window:CreateTab({Name="Teleport"})
+local Slider = Tab:CreateSlider({
+	Name = "Speed",
+	Suffix = "Studs",
+	
+	Range = {16, 100},
+	Interval = 1,
+	Default = 16,
+	
+	Callback = function(Value)
+		DevTools.Player:SetSpeed(Value)
+	end,
+})
+
+local Slider = Tab:CreateSlider({
+    Name = "JumpPower",
+    Suffix = "Studs",
+
+    Range = {16,100},
+    Interval = 1,
+    Default = 16,
+
+    Callback = function(Value)
+     DevTools.Player:SetJumpPower(Value)
+    end,
+})
