@@ -65,9 +65,10 @@ local Slider = Tab:CreateSlider({
 local Label = Tab:CreateLabel("Player Reset")
 
 local Button = Tab:CreateButton({
-    Name = "Reset",
+    Name = "Reset Character",
     Callback = function()
         DevTools.Player:Kill()
+    end,
 })
 
 
