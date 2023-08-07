@@ -41,3 +41,5 @@ local Button = Tab:CreateButton({
         DevTools.Player:Kill()
     end,
 })
+
+local Tab = Window:CreateTab({Name = "Discord/Support", Icon="rbxassetid://6022668911"})
