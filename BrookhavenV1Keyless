@@ -2,70 +2,20 @@ local DevTools = loadstring(game:HttpGet("https://raw.githubusercontent.com/05-4
 local Window = DevTools:Init({
     Name = "Brookhaven Script", -- Required: Provide a name for the window
     Title = "Pormans Utility Presents", -- Required: Set the title of the loading screen
-    Subtitle = "by @Porman", -- Required: Add a brief description for the loading screen
-    Icon = "rbxassetid://6031289451", -- Optional: Set an icon for the window
-    LoadingBackgroundImage = "rbxassetid://6023565902", -- Optional: Set a background image for the loading screen
+    Subtitle = "by Porman", -- Required: Add a brief description for the loading screen
+    Icon = "rbxassetid://6031280882", -- Optional: Set an icon for the window
+    LoadingBackgroundImage = "rbxassetid://6031251515", -- Optional: Set a background image for the loading screen
     Options = {
         KillYourself = false, -- Optional: Set to true to reset character on launch
         FOVAnimations = true, -- Optional: Set to true to enable FOV Animations
     }
 })
 
-local Tab = Window:CreateTab({ Name = "Main Settings", Icon = "rbxassetid://6031280902" })
-local Label = Tab:CreateLabel("Info: Official Script!")
 
-
-local Tab = Window:CreateTab({Name="Home", Icon="rbxassetid://6031265972"})
-local Label = Tab:CreateLabel("Soon!")
-
-local Tab = Window:CreateTab({Name = "Car", Icon="rbxassetid://6031265968"})
-
-local Tab = Window:CreateTab({Name="Avatar", Icon="rbxassetid://6026568237"})
-
-local Tab = Window:CreateTab({Name="Hubs", Icon="rbxassetid://6022668907"})
-
-local Tab = Window:CreateTab({Name="Support", Icon="rbxassetid://6031251532"})
-
-
-
-local Tab = Window:CreateTab({Name="Other!"})
-
-local Tab = Window:CreateTab({Name="Teleport"})
-
-
-local Tab = Window:CreateTab({Name="Our Chat Bypass"})
-
-
-local Tab = Window:CreateTab({Name="Fun", Icon="rbxassetid://6026568229"})
-
-local Slider = Tab:CreateSlider({
-    Name = "WalkSpeed",
-    Suffix = "Studs",
-
-    Range = {16,100},
-    Interval = 1,
-    Default = 16,
-
-    Callback = function(Value)
-        DevTools.Player:SetSpeed(Value)
-    end,
-})
-
-local Slider = Tab:CreateSlider({
-    Name = "JumpPower",
-    Suffix = "Studs",
-
-    Range = {16,200},
-    Interval = 1,
-    Default = 16,
-
-    Callback = function(Value)
-        DevTools.Player:SetJumpPower(Value)
-})
-local Label = Tab:CreateLabel("Player Reset")
+local Tab = Window:CreateTab({Name = "Main Settings"})
 
 local Button = Tab:CreateButton({
-    Name = "Reset Character",
+    Name =  "Reset",
     Callback = function()
         DevTools.Player:Kill()
     end,
