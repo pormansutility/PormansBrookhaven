@@ -45,4 +45,17 @@ local Tab = Window:CreateTab({Name="Our Chat Bypass"})
 
 local Tab = Window:CreateTab({Name="Fun", Icon="rbxassetid://6026568229"})
 
+local Slider = Tab:CreateSlider({
+    Name = "WalkSpeed",
+    Suffix = "Studs",
+
+    Range = {16,1000},
+    Interval = 1,
+    Default = 16,
+
+    Callback = function()
+        DevTools.Player:SetSpeed()
+    end,
+})
+
 local Tab = Window:CreateTab({Name="Abuse"})
