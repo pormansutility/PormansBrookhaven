@@ -7,7 +7,7 @@ local Window = DevTools:Init({
     LoadingBackgroundImage = "rbxassetid://6031251515", -- Optional: Set a background image for the loading screen
     Options = {
         KillYourself = false, -- Optional: Set to true to reset character on launch
-        FOVAnimations = true, -- Optional: Set to true to enable FOV Animations
+        FOVAnimations = false, -- Optional: Set to true to enable FOV Animations
     }
 })
 
@@ -23,9 +23,10 @@ local Tab = Window:CreateTab({Name="Avatar"})
 local Tab = Window:CreateTab({Name="Hubs"})
 
 local Tab = Window:CreateTab({Name="Fun"})
+local Label = Tab:CreateLabel("Walkspeed")
 local Slider = Tab:CreateSlider({
     Name = "Walkspeed",
-    Suffix = "Studs",
+    Suffix = "Speed",
 
     Range = {16,100},
     Interval = 1,
@@ -33,7 +34,20 @@ local Slider = Tab:CreateSlider({
 
     Callback = function(Value)
         DevTools.Player:SetSpeed(Value)
-    end,
+
+    local Label = Tab:CreateLabel("JumpPower")
+
+    local Slider = Tab:CreateSlider({
+        Name = "JumpPower",
+        Suffix = 'High",
+        
+        Range = {17,100},
+        Interval = 1,
+        Default = 16,
+
+        Callback = function(Value)
+            DevTools.Player:SetJumpPower(Value)
+    })
 })
 local Button = Tab:CreateButton({
     Name = "Reset",
@@ -43,3 +57,5 @@ local Button = Tab:CreateButton({
 })
 
 local Tab = Window:CreateTab({Name = "Discord/Support", Icon="rbxassetid://6022668911"})
+
+local Tab = Window:CreateTab({Name="Instant"})
