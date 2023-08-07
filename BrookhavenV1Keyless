@@ -49,6 +49,8 @@ local Slider = Tab:CreateSlider({
             DevTools.Player:SetJumpPower(Value)
         end,
     })
+
+    local Label = Tab:CreateLabel("Reset Button")
 local Button = Tab:CreateButton({
     Name = "Reset",
     Callback = function()
@@ -59,3 +61,19 @@ local Button = Tab:CreateButton({
 local Tab = Window:CreateTab({Name = "Discord/Support", Icon="rbxassetid://6022668911"})
 
 local Tab = Window:CreateTab({Name="Instant"})
+
+local Label = Tab:CreateLabel("Instant Kill")
+local LoopReset = true
+
+local Toggle = Tab:CreateToggle({
+    Name = "Loop Reset Character",
+    Callback = function(Value)
+        LoopReset = Value
+    end,
+})
+
+game:GetService("RunService").RenderStepped:Connect(function()
+	if LoopReset then
+		DevTools.Player:Kill()
+	end
+end)
